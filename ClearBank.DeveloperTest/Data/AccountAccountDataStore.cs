@@ -2,17 +2,17 @@
 
 namespace ClearBank.DeveloperTest.Data
 {
-    public class BackupAccountDataStore
+    public class AccountAccountDataStore : IAccountDataStore
     {
         public Account GetAccount(string accountNumber)
         {
-            // Access backup data base to retrieve account, code removed for brevity 
+            // Access database to retrieve account, code removed for brevity 
             return new Account();
         }
 
         public void UpdateAccount(Account account)
         {
-            // Update account in backup database, code removed for brevity
+            // Update account in database, code removed for brevity
         }
     }
 }
