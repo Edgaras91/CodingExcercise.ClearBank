@@ -1,4 +1,5 @@
-﻿using ClearBank.DeveloperTest.Services;
+﻿using System;
+using ClearBank.DeveloperTest.Services;
 using ClearBank.DeveloperTest.Types;
 using NUnit.Framework;
 
@@ -43,6 +44,12 @@ namespace ClearBank.DeveloperTest.Tests.Services
         {
             var paymentAllowed = _sut.IsPaymentAllowed(account, paymentScheme, chargeAmount);
             Assert.That(paymentAllowed, Is.False);
+        }
+
+        [Test]
+        public void IsPaymentAllowed_NullAccount_ShouldThrowAnException()
+        {
+            Assert.Throws<ArgumentNullException>(() => _sut.IsPaymentAllowed(null, PaymentScheme.Bacs, 100m));
         }
     }
 }
