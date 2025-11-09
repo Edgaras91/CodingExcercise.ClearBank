@@ -7,10 +7,10 @@
             var dataStoreType = System.Configuration.ConfigurationManager.AppSettings["DataStoreType"];
             if (dataStoreType == "Backup")
             {
-                return new BackupAccountAccountDataStore();
+                return new BackupAccountDataStore();
             }
 
-            return new AccountAccountDataStore();
+            return new AccountDataStore();
         }
     }
 }
