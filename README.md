@@ -31,4 +31,4 @@ You should plan to spend around 1 to 3 hours to complete the exercise.
 ### What could be improved
 
 - The app settings could use `IConfiguration` to better abstract in tests, instead of using real `ConfigurationManager.AppSettings["DataStoreType"]`
-- `AccountService` takes in a Request's model Enum `PaymentScheme`. In real app this may be no accessible, so service may want to use service layer Enum instead. But for now it's YAGNI for current code base.
+- `AccountService` takes in a Request's model Enum `PaymentScheme`. In real app this may be not accessible, so service may want to use service layer Enum instead. But for now it's YAGNI for current code base.
